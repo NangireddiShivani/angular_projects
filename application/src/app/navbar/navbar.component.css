@@ -1,0 +1,36 @@
+
+body{
+    text-align: center;
+    background-color: rgb(130, 116, 181);
+    text-align: center;
+    margin-top: 10%;
+    max-width: 40%;
+    margin-left: 30%;
+   
+}
+h1{
+    color: rgb(80, 31, 64);
+    font-size: 350%;
+    margin-bottom: 4%;
+  
+    
+}
+#name,#email,#password{
+    border-radius: 10%;
+    border-color: black;
+    font-size: 150%;
+    
+}
+#name,#email,#password::placeholder{
+    text-align: center;
+}
+
+
+button{
+    font-size: 150%;
+    background-color: rgb(92, 155, 155);
+    border-color: black;
+    border-radius: 27%;
+    margin-bottom: 5%;
+   
+}

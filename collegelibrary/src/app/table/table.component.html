@@ -1,0 +1,15 @@
+<section>
+    <div class="container">
+        <div class="row" *ngFor="let f of food">
+            <div class="col-md-4">
+                <div class="card">
+                    <img [src]="f.src" [alt]="f.alt">
+                    <div class="card-title">
+                        <h1>{{f.title}}</h1>
+                        <p>{{f.price}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

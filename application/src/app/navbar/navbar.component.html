@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.component.css">
+</head>
+<body>
+    <h1>Sign Up</h1><br>
+    <form [formGroup]="userform">
+        <input type="text" id="name" placeholder="Enter your name" formControlName="name"><br><br>
+
+        <input type="email" id="email" placeholder="Enter your email"formControlName="email"><br><br>
+
+        <input type="password" id="password" placeholder="Enter your password"formControlName="password"><br><br>
+
+        <button (click)="postdata()">Insert</button>
+    </form>
+     
+</body>
+</html>

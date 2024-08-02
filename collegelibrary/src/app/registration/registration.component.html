@@ -1,0 +1,21 @@
+<!-- <input type="text" #myinput>
+<button (click)="onsubmit(myinput.value)">submit</button>
+{{myinput.value}}
+<input type="text" [(ngModel)]="name">
+{{name}} -->
+<form (ngSubmit)="submit()" [formGroup]="loginform">
+    <input type="text" name="name" [(ngModel)]="student.name" formControlName="name">
+    <small *ngIf="loginform.get('name')?.hasError('required')&&loginform.get('name')?.touched">Enter a valid name</small>
+    <small *ngIf="loginform.get('name')?.hasError('maxLength')&&loginform.get('name')?.touched">username must be in 10 characters</small>
+    <small *ngIf="loginform.get('name')?.hasError('minLength')&&loginform.get('name')?.touched">username shuold have min of 4 characters</small>
+    <input type="email" name="email" [(ngModel)]="student.email" formControlName="email">
+    <small *ngIf="loginform.get('email')?.hasError('required')&&loginform.get('email')?.touched">Enter a valid mail</small>
+    <small *ngIf="loginform.get('email')?.hasError('email')&&loginform.get('email')?.touched">Should match the email format</small>
+    <input type="tel" name="mobileno" [(ngModel)]="student.mobileno" formControlName="mobileno">
+    <small *ngIf="loginform.get('mobileno')?.hasError('required')&&loginform.get('mobileno')?.touched">Invalid number</small>
+    <small *ngIf="loginform.get('mobileno')?.hasError('maxLength')&&loginform.get('mobileno')?.touched">mobile number must be of 10 numbers</small>
+    <small *ngIf="loginform.get('mobileno')?.hasError('minLength')&&loginform.get('mobileno')?.touched">mobile number must be of 10 numbers</small>
+    <input type="password" name="password" [(ngModel)]="student.password" formControlName="password">
+    <small *ngIf="loginform.get('password')?.hasError('required')&&loginform.get('password')?.touched">Enter a valid password</small>
+    <button type="submit">submit</button>
+</form>
